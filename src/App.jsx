@@ -339,7 +339,7 @@ export default function App() {
     const connectWebSocket = () => {
       try {
         setWsStatus('RECONNECTING');
-        ws = new WebSocket('ws://localhost:8765');
+        ws = new WebSocket('wss://solid-spiders-burn.loca.lt');
         socketRef.current = ws;
 
         ws.onopen = () => {
@@ -1081,7 +1081,7 @@ export default function App() {
                       ACQUIRING REAL-TIME OPTICAL STREAM...
                     </div>
                     <div style={{ fontSize: '0.74rem', color: 'var(--text-dim)', fontFamily: 'var(--font-mono)' }}>
-                      Connecting to ws://localhost:8765 / video device
+                      Connecting to wss://solid-spiders-burn.loca.lt / video device
                     </div>
                   </div>
                 )}
@@ -1687,7 +1687,7 @@ export default function App() {
           <span style={{ color: 'var(--accent-cyan)' }}>ISO 9001 / IPC-A-610G COMPLIANT</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-          <span>WebSocket Target: <code style={{ color: '#22d3ee' }}>ws://localhost:8765</code></span>
+          <span>WebSocket Target: <code style={{ color: '#22d3ee' }}>wss://solid-spiders-burn.loca.lt</code></span>
           <span>Secure Edge Pipeline</span>
         </div>
       </footer>
